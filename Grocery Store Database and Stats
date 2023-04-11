@@ -1,0 +1,28 @@
+--Create a grocery store database.
+
+CREATE TABLE Clothes (id INTEGER PRIMARY KEY, name TEXT, color TEXT, price INTEGER, inventory INTEGER);
+
+INSERT INTO Clothes VALUES
+(1, "Shirt", "Red", 15.50, 2),
+(2, "Jeans", "Blue", 25.00, 7),
+(3, "Socks", "White", 5.50, 3),
+(4, "Socks", "Black", 5.00, 3),
+(5, "Jeans", "Black", 25.50, 7),
+(6, "Shirt", "Blue", 15.00, 2),
+(7, "Shoes", "White", 40.00, 9),
+(8, "Hat", "Yellow", 10.50, 4),
+(9, "Hat", "Green", 10.75, 4),
+(10, "Tie", "Purple", 12.00, 1),
+(11, "Tie", "Red", 12.75, 1),
+(12, "Necklace", "Gold", 100.00, 10),
+(13, "Necklace", "Silver", 75.00, 10),
+(14, "Ring", "Gold", 95.00, 10),
+(15, "Ring", "Silver", 80.00, 10);
+
+SELECT * FROM Clothes;
+
+--Display database ordered by price.
+SELECT * FROM Clothes ORDER BY price; 
+
+--Display statistic about database. 
+SELECT SUM (inventory) FROM Clothes;
